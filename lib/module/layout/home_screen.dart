@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news/module/layout/screen/category_screen.dart';
-import 'package:news/module/layout/screen/category_screen/tabs/category_details_screen.dart';
+import 'package:news/module/layout/screen/news_screen/tabs/category_details_screen.dart';
 import 'package:news/module/layout/screen/settings_screen.dart';
 import 'package:news/module/layout/widgets/custom_drawer.dart';
 

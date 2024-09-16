@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:news/api/manager/api_manager.dart';
 import 'package:news/models/category_data.dart';
-import 'package:news/module/layout/screen/category_screen/category_items.dart';
 
-import '../news/news_widget.dart';
+import '../category_items.dart';
 
 class CategoryDetailsScreen extends StatelessWidget {
   CategoryData category;

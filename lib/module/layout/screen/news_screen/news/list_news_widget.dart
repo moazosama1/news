@@ -2,19 +2,18 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:news/api/manager/api_manager.dart';
 import 'package:news/api/models/source.dart';
-import 'package:news/module/layout/screen/category_screen/news_details/news_details.dart';
+import '../news_details/news_details.dart';
+import 'custom_news_item.dart';
 
-import 'news_item.dart';
-
-class NewsWidget extends StatefulWidget {
+class ListNewsWidget extends StatefulWidget {
   Source? source;
-  NewsWidget(this.source, {super.key});
+  ListNewsWidget(this.source, {super.key});
 
   @override
-  State<NewsWidget> createState() => _NewsWidgetState();
+  State<ListNewsWidget> createState() => _ListNewsWidgetState();
 }
 
-class _NewsWidgetState extends State<NewsWidget> {
+class _ListNewsWidgetState extends State<ListNewsWidget> {
   var selectedNews;
   @override
   Widget build(BuildContext context) {
@@ -46,7 +45,7 @@ class _NewsWidgetState extends State<NewsWidget> {
                   } ,
                   child: Card(
                     color: Colors.white,
-                child: NewsItem(newsList?[index]),
+                child: CustomNewsItem(newsList?[index]),
               ));
             },
             separatorBuilder: (context, index) {

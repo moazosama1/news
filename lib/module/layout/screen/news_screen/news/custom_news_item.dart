@@ -3,9 +3,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:news/api/models/News.dart';
 
-class NewsItem extends StatelessWidget {
+class CustomNewsItem extends StatelessWidget {
   News? news;
-  NewsItem(this.news, {super.key});
+  CustomNewsItem(this.news, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -61,8 +61,7 @@ class NewsItem extends StatelessWidget {
               Text(
                 news?.publishedAt?.substring(0, 10) ?? "",
                 textAlign: TextAlign.end,
-                style:const TextStyle(
-                    fontSize: 12, color: Color(0xffA3A3A3)),
+                style: const TextStyle(fontSize: 12, color: Color(0xffA3A3A3)),
               ),
             ],
           )

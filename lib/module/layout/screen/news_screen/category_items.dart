@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:news/module/layout/screen/category_screen/news/news_widget.dart';
 
 import '../../../../api/models/source.dart';
+import 'news/list_news_widget.dart';
 import 'tabs/custom_tabs.dart';
 
 class CategoryTab extends StatefulWidget {
@@ -45,7 +45,7 @@ class _CategoryTabState extends State<CategoryTab> {
                         )
                         .toList() ??
                     []),
-            Expanded(child: NewsWidget(widget.sources?[selectedItems]))
+            Expanded(child: ListNewsWidget(widget.sources?[selectedItems]))
           ],
         ));
   }
