@@ -30,11 +30,13 @@ class CustomCategory extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Image(image: AssetImage(category.nameImage) , height: 120 , width: 120),
+          Image(image: AssetImage(category.nameImage), height: 120, width: 120),
           Text(
             category.name,
             style: TextStyle(
-                color: theme.colorScheme.onPrimaryContainer, fontSize: 22),
+                color: theme.colorScheme.onPrimaryContainer,
+                fontSize: 20,
+                fontWeight: FontWeight.w700),
           ),
         ],
       ),

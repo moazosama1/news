@@ -1,7 +1,8 @@
-
 import 'package:flutter/material.dart';
 import 'package:news/module/layout/home_screen.dart';
-typedef OnChangeTab =void Function(EnumSideMenuItems);
+
+typedef OnChangeTab = void Function(EnumSideMenuItems);
+
 class CustomDrawer extends StatelessWidget {
   CustomDrawer({
     required this.mediaQueryHeight,
@@ -10,7 +11,7 @@ class CustomDrawer extends StatelessWidget {
   });
   final double mediaQueryHeight;
   final ThemeData theme;
-  OnChangeTab onChangeTab ;
+  OnChangeTab onChangeTab;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -27,7 +28,7 @@ class CustomDrawer extends StatelessWidget {
             child: Text(
               "News APP!",
               style:
-              TextStyle(color: theme.colorScheme.onPrimary, fontSize: 30),
+                  TextStyle(color: theme.colorScheme.onPrimary, fontSize: 30),
             ),
           ),
         ),
@@ -35,24 +36,40 @@ class CustomDrawer extends StatelessWidget {
           onTap: () {
             onChangeTab(EnumSideMenuItems.category);
           },
-          overlayColor:const  WidgetStatePropertyAll(Colors.transparent),
+          overlayColor: const WidgetStatePropertyAll(Colors.transparent),
           child: ListTile(
-            leading:const  Icon(Icons.category ,size: 30,),
-            iconColor:theme.colorScheme.inverseSurface,
-            contentPadding:const  EdgeInsets.symmetric(vertical: 5 , horizontal: 30),
-            title: Text("Category" ,style: TextStyle(color: theme.colorScheme.inverseSurface , fontSize: 25),),
+            leading: const Icon(
+              Icons.category,
+              size: 30,
+            ),
+            iconColor: theme.colorScheme.inverseSurface,
+            contentPadding:
+                const EdgeInsets.symmetric(vertical: 5, horizontal: 30),
+            title: Text(
+              "Category",
+              style: TextStyle(
+                  color: theme.colorScheme.inverseSurface, fontSize: 25),
+            ),
           ),
         ),
         InkWell(
           onTap: () {
             onChangeTab(EnumSideMenuItems.settings);
           },
-          overlayColor:const  WidgetStatePropertyAll(Colors.transparent),
+          overlayColor: const WidgetStatePropertyAll(Colors.transparent),
           child: ListTile(
-            leading:const  Icon(Icons.settings ,size: 30,),
-            iconColor:theme.colorScheme.inverseSurface,
-            contentPadding:const  EdgeInsets.symmetric(vertical:5, horizontal: 30),
-            title: Text("Settings" ,style: TextStyle(color: theme.colorScheme.inverseSurface , fontSize: 25),),
+            leading: const Icon(
+              Icons.settings,
+              size: 30,
+            ),
+            iconColor: theme.colorScheme.inverseSurface,
+            contentPadding:
+                const EdgeInsets.symmetric(vertical: 5, horizontal: 30),
+            title: Text(
+              "Settings",
+              style: TextStyle(
+                  color: theme.colorScheme.inverseSurface, fontSize: 25),
+            ),
           ),
         ),
       ],

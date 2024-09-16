@@ -45,6 +45,7 @@ class _NewsWidgetState extends State<NewsWidget> {
                   });
                   } ,
                   child: Card(
+                    color: Colors.white,
                 child: NewsItem(newsList?[index]),
               ));
             },

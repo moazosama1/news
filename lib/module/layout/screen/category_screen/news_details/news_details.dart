@@ -16,22 +16,26 @@ class NewsDetails extends StatelessWidget {
       padding: const EdgeInsets.all(10.0),
       child: Column(
         children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(15),
-            child: CachedNetworkImage(
-              imageUrl: selectedNews?.urlToImage ?? "",
-              width: double.infinity,
-              height: 240,
-              fit: BoxFit.fill,
-              progressIndicatorBuilder: (context, url, downloadProgress) =>
-                  Center(
-                      child: CircularProgressIndicator(
-                          value: downloadProgress.progress)),
-              errorWidget: (context, url, error) => const Icon(
-                Icons.error,
-                size: 50,
+          Stack(
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.circular(15),
+                child: CachedNetworkImage(
+                  imageUrl: selectedNews?.urlToImage ?? "",
+                  width: double.infinity,
+                  height: 240,
+                  fit: BoxFit.fill,
+                  progressIndicatorBuilder: (context, url, downloadProgress) =>
+                      Center(
+                          child: CircularProgressIndicator(
+                              value: downloadProgress.progress)),
+                  errorWidget: (context, url, error) => const Icon(
+                    Icons.error,
+                    size: 50,
+                  ),
+                ),
               ),
-            ),
+            ],
           ),
           const SizedBox(
             height: 5,
@@ -54,8 +58,9 @@ class NewsDetails extends StatelessWidget {
                 selectedNews?.title ?? "",
                 textAlign: TextAlign.start,
                 style: TextStyle(
-                  fontWeight: FontWeight.w500,
-                    fontSize: 18, color: theme.colorScheme.inverseSurface),
+                    fontWeight: FontWeight.w500,
+                    fontSize: 18,
+                    color: theme.colorScheme.inverseSurface),
               ),
               const SizedBox(
                 height: 5,
@@ -89,7 +94,8 @@ class NewsDetails extends StatelessWidget {
                         height: 30,
                       ),
                       InkWell(
-                        overlayColor: const WidgetStatePropertyAll(Colors.transparent),
+                        overlayColor:
+                            const WidgetStatePropertyAll(Colors.transparent),
                         onTap: _launchUrl,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.end,

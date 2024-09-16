@@ -21,15 +21,15 @@ class CustomTabItems extends StatelessWidget {
               color: !isSelected
                   ? theme.colorScheme.primaryContainer
                   : Colors.transparent,
-              width: 2)),
+              width: 3)),
       child: Text(
         source.name ?? "",
         style: TextStyle(
             color: isSelected
                 ? theme.colorScheme.onPrimaryContainer
                 : theme.colorScheme.primaryContainer,
-            fontSize: 25,
-            fontWeight: FontWeight.w500),
+            fontSize: 20,
+            fontWeight: FontWeight.w600),
       ),
     );
   }
